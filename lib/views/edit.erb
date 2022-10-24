@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Le potain a changé<%=params['id']%></title>
+  </head>
+  <body>
+    <h1>Edition du potin n°<%=params['id']%></h1>
+
+    <br>
+    <form action='/gossips/<%=id%>/edit' method='POST'>
+      Nouveau nom :  <input type='text' name='gossip_author'/><br/>
+      Nouveau potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+    <a href="/">Retour à l'accueil</a>
+    </p>
+  </body>
+</html>

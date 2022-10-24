@@ -13,13 +13,16 @@ class Gossip
   end
   
   def self.all
-    all_gossips = []
+    @@all_gossips = []
     CSV.read("./db/gossip.csv").each do |csv_line|
-      all_gossips << Gossip.new(csv_line[0], csv_line[1])
+      @@all_gossips << Gossip.new(csv_line[0], csv_line[1])
     end
-    return all_gossips
+    return @@all_gossips
   end
-
+  
+  def self.find(id)
+		return Gossip.all[id.to_i - 1]
+	end
 
 
 end #class end

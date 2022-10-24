@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Potin n°<%=params['id']%></title>
+  </head>
+  <body>
+    <h1>Consultation du potin n°<%=params['id']%></h1>
+    <p>Voici ce qu'a dit <%= gossip.author %></p>
+    <br>
+        <p>
+          <%= gossip.content %>
+          <br>
+          <hr>
+          <br>
+          <a href="/">Retour à l'accueil</a>
+        </p>
+  </body>
+</html>

@@ -7,5 +7,12 @@
     <hr>
     <p>Bienvenu à toi ! La liste des potins arrive bientôt.</p>
     <a href="/gossips/new/">Créer un nouveau potin</a>
+    <hr>
+    <% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
   </body>
 </html>
